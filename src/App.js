@@ -14,10 +14,16 @@ export default function App() {
       // Old array + New items Merge and Return New arrayF
       return [...oldValue, taskName];
     });
+    setTaskName('');
   };
 
-  let deleteData = () => {
+  let deleteItems = (id) => {
     console.log('clickem');
+    setTaskList((oldValue) => {
+      return oldValue.filter((arrayElement, index) => {
+        return index !== id;
+      });
+    });
   };
 
   return (
@@ -38,6 +44,7 @@ export default function App() {
                         placeholder="Enter a task here"
                         name="taskName"
                         onChange={InputValue}
+                        value={taskName}
                       />
                     </div>
                   </div>
@@ -64,7 +71,12 @@ export default function App() {
                   <tbody>
                     {taskList.map((items, index) => {
                       return (
-                        <List id={index} name={items} delBtn={deleteData} />
+                        <List
+                          key={index}
+                          id={index}
+                          name={items}
+                          OnSelect={deleteItems}
+                        />
                       );
                     })}
                   </tbody>
