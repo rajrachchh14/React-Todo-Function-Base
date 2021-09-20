@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import List from './List';
+import ListTwo from './ListTwo';
 
 export default function App() {
   const [taskName, setTaskName] = useState('');
@@ -17,6 +18,7 @@ export default function App() {
     setTaskName('');
   };
 
+  /* Program 1
   let deleteItems = (id) => {
     console.log('clickem');
     setTaskList((oldValue) => {
@@ -25,6 +27,8 @@ export default function App() {
       });
     });
   };
+
+  */
 
   return (
     <>
@@ -71,12 +75,15 @@ export default function App() {
                   <tbody>
                     {taskList.map((items, index) => {
                       return (
-                        <List
-                          key={index}
-                          id={index}
-                          name={items}
-                          delete={deleteItems}
-                        />
+                        // Program 1
+                        // <List
+                        //   key={index}
+                        //   id={index}
+                        //   name={items}
+                        //   delete={deleteItems}
+                        // />
+                        // Program 2
+                        <ListTwo key={index} id={index} name={items} />
                       );
                     })}
                   </tbody>
