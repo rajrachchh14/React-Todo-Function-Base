@@ -7,7 +7,11 @@ export default function List(props) {
       <td>{props.name}</td>
 
       <td>
-        <button type="submit" className="btn btn-danger">
+        <button
+          type="submit"
+          className="btn btn-danger"
+          onClick={props.delBtn(props.id)}
+        >
           Delete
         </button>
       </td>

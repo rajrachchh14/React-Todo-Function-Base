@@ -16,6 +16,10 @@ export default function App() {
     });
   };
 
+  let deleteData = () => {
+    console.log('clickem');
+  };
+
   return (
     <>
       <div className="container py-5">
@@ -59,7 +63,9 @@ export default function App() {
                   </thead>
                   <tbody>
                     {taskList.map((items, index) => {
-                      return <List id={index} name={items} />;
+                      return (
+                        <List id={index} name={items} delBtn={deleteData} />
+                      );
                     })}
                   </tbody>
                 </table>
