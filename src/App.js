@@ -13,7 +13,7 @@ export default function App() {
                     <h4 className="text-center my-3 pb-3">To Do App</h4>
 
                     <div className="row p-12">
-                      <div className="col-10">
+                      <div className="col-9">
                         <div className="form-outline">
                           <input
                             type="text"

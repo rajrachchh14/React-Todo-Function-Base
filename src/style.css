@@ -1,3 +1,7 @@
 .section {
   background-color: #eee;
 }
+
+.form-outline {
+  padding-bottom: 50px;
+}
