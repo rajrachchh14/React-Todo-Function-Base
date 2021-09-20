@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import List from './List';
 
 export default function App() {
   const [taskName, setTaskName] = useState('');
@@ -58,18 +59,7 @@ export default function App() {
                   </thead>
                   <tbody>
                     {taskList.map((items, index) => {
-                      return (
-                        <tr key={index}>
-                          <th scope="row">{index}</th>
-                          <td>{items}</td>
-
-                          <td>
-                            <button type="submit" className="btn btn-danger">
-                              Delete
-                            </button>
-                          </td>
-                        </tr>
-                      );
+                      return <List id={index} name={items} />;
                     })}
                   </tbody>
                 </table>
