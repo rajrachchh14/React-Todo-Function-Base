@@ -75,7 +75,7 @@ export default function App() {
                           key={index}
                           id={index}
                           name={items}
-                          OnSelect={deleteItems}
+                          delete={deleteItems}
                         />
                       );
                     })}

@@ -11,7 +11,7 @@ export default function List(props) {
           type="submit"
           className="btn btn-danger"
           onClick={() => {
-            props.OnSelect(props.id);
+            props.delete(props.id);
           }}
         >
           Delete
