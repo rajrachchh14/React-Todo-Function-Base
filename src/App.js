@@ -11,7 +11,7 @@ export default function App() {
 
   let Submit = () => {
     setTaskList((oldValue) => {
-      // Old array + New items Merge and Return New arrayF
+      // Old array + New items Merge and Return New array
       return [...oldValue, taskName];
     });
     setTaskName('');
