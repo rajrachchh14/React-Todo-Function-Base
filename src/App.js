@@ -18,7 +18,7 @@ export default function App() {
     setTaskName('');
   };
 
-  /* Program 1
+  /* Program 1 */
   let deleteItems = (id) => {
     console.log('clickem');
     setTaskList((oldValue) => {
@@ -27,8 +27,6 @@ export default function App() {
       });
     });
   };
-
-  */
 
   return (
     <>
@@ -76,14 +74,14 @@ export default function App() {
                     {taskList.map((items, index) => {
                       return (
                         // Program 1
-                        // <List
-                        //   key={index}
-                        //   id={index}
-                        //   name={items}
-                        //   delete={deleteItems}
-                        // />
+                        <List
+                          key={index}
+                          id={index}
+                          name={items}
+                          delete={deleteItems}
+                        />
                         // Program 2
-                        <ListTwo key={index} id={index} name={items} />
+                        // <ListTwo key={index} id={index} name={items} />
                       );
                     })}
                   </tbody>
