@@ -18,6 +18,10 @@ export default function App() {
     setTaskName('');
   };
 
+  let Clear = () => {
+    setTaskList([]);
+  };
+
   /* Program 1 */
   let deleteItems = (id) => {
     console.log('clickem');
@@ -38,7 +42,7 @@ export default function App() {
                 <h4 className="text-center my-3 pb-3">To Do App</h4>
 
                 <div className="row p-12">
-                  <div className="col-9">
+                  <div className="col-7">
                     <div className="form-outline">
                       <input
                         type="text"
@@ -58,6 +62,16 @@ export default function App() {
                       onClick={Submit}
                     >
                       Save
+                    </button>
+                  </div>
+
+                  <div className="col-2">
+                    <button
+                      type="submit"
+                      className="btn btn-danger"
+                      onClick={Clear}
+                    >
+                      Clear
                     </button>
                   </div>
                 </div>
